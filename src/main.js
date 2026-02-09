@@ -142,11 +142,8 @@ function sequence(steps) {
 }
 
 const sfx = {
-  // ✅ "쿵" + "종이 넘김" 2음 조합
   stampPaper: () => {
-    // 쿵: 저음 짧게
     tone({ freq: 140, duration: 0.10, type: "square", gain: 0.09 });
-    // 종이: 두 음을 아주 짧게 (고음+중음)로 "슥" 느낌
     setTimeout(() => {
       sequence([
         { freq: 950, duration: 0.03, type: "sawtooth", gain: 0.03, waitMs: 40 },
@@ -155,10 +152,9 @@ const sfx = {
     }, 90);
   },
 
-  // 재생 시작 짧은 삑
+
   play: () => tone({ freq: 820, duration: 0.06, type: "sine", gain: 0.05 }),
 
-  // ✅ 제한 걸릴 때 "사이렌 3음"
   siren3: () => {
     sequence([
       { freq: 880, duration: 0.10, type: "sine", gain: 0.06, waitMs: 140 },
@@ -181,7 +177,7 @@ let bgmTried = false;
 async function startBgmOnce() {
   if (!bgm || bgmStarted) return;
 
-  // ✅ 실패해도 계속 무한시도 안 하게 1차 방지
+  // 실패해도 계속 무한시도 안 하게 1차 방지
   if (bgmTried) return;
   bgmTried = true;
 
@@ -191,14 +187,11 @@ async function startBgmOnce() {
     await bgm.play();
     bgmStarted = true;
   } catch (e) {
-    // ❗ 자동재생 막히면: 다음 "확실한 클릭"에서 다시 시도할 수 있게 풀어줌
     bgmTried = false;
-    // 콘솔에 원인 찍어두면 좋음
     console.warn("[BGM] play blocked or failed:", e?.name || e);
   }
 }
 
-// ✅ 첫 클릭에서만 시도 (브라우저 정책 대응 + 에러 스팸 방지)
 window.addEventListener(
   "pointerdown",
   () => {
@@ -278,13 +271,6 @@ function shakeQuota() {
   setTimeout(() => quotaEl.classList.remove("quota-shake"), 320);
 }
 
-/**
- * 규칙:
- * - "새 질문(처음 듣는 것)"만 remaining 차감
- * - heard(한번 들은 질문)은 재청취 무료
- * - remaining 0이 되면 limitReached=true, 상단 경고줄 표시
- * - limitReached 상태에서도 heard 질문들은 계속 재생 가능
- */
 function playOrToggle(suspect, idx) {
   const key = `${suspect.id}-${idx}`;
   const qText = suspect.questions[idx].q;
@@ -297,7 +283,7 @@ function playOrToggle(suspect, idx) {
 
   const alreadyHeard = heard.has(key);
 
-  // ✅ 기회 0 & 안 들은 질문이면 차단
+  
   if (remaining <= 0 && !alreadyHeard) {
     nowPlaying.textContent = "청문 기회가 소진되어 새로운 증언은 들을 수 없습니다.";
     sfx.deny();
@@ -379,7 +365,6 @@ function render() {
   updateQuotaUI();
 }
 
-/* ✅ 증언 재생/정지에 맞춰 BGM 덕킹 */
 audio.addEventListener("play", () => duckBgm(true));
 audio.addEventListener("pause", () => duckBgm(false));
 

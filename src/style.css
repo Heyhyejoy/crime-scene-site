@@ -491,7 +491,7 @@ h2{
   opacity: 0.92;
 }
 
-/* ===== 잠김 상태 버튼 느낌 ===== */
+/* ===== 잠김 상태 버튼  ===== */
 .qbtn.is-disabled,
 .qbtn:disabled {
   opacity: 0.28;
