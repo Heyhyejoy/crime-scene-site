@@ -1,4 +1,3 @@
-import "./style.css";
 
 const MAX_PLAYS = 12;
 
