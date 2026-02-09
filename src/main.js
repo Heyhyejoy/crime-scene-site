@@ -9,11 +9,11 @@ const SUSPECTS = [
     role: "SUSPECT ①",
     name: "목사님",
     desc: "청년부 담당 교역자",
-    img: "/assets/images/pastor.jpg",
+    img: "./assets/images/pastor.jpg",
     questions: [
-      { q: "Q1. 돈은 왜 필요하셨나요?", audio: "/assets/audio/cho_1.m4a" },
-      { q: "Q2. 정전 후 어디로 가셨고 왜 오래 걸렸나요?", audio: "/assets/audio/cho_2.m4a" },
-      { q: "Q3. 방에 가시는 동안 수상한걸 보진 않으셨나요?", audio: "/assets/audio/cho_3.m4a" },
+      { q: "Q1. 돈은 왜 필요하셨나요?", audio: "./assets/audio/cho_1.m4a" },
+      { q: "Q2. 정전 후 어디로 가셨고 왜 오래 걸렸나요?", audio: "./assets/audio/cho_2.m4a" },
+      { q: "Q3. 방에 가시는 동안 수상한걸 보진 않으셨나요?", audio: "./assets/audio/cho_3.m4a" },
     ],
   },
   {
@@ -21,19 +21,19 @@ const SUSPECTS = [
     role: "SUSPECT ②",
     name: "황회장",
     desc: "현 청년부 회장 / 위러브 기획",
-    img: "/assets/images/hwang-president.jpg",
+    img: "./assets/images/hwang-president.jpg",
     questions: [
       {
         q: "Q1. 평소 민트 사탕을 좋아하신다고 들었습니다. 사건 현장 바닥에서 발견된 'Excel' 한 알이 회장님의 것은 아닌가요?",
-        audio: "/assets/audio/hwang_1.m4a",
+        audio: "./assets/audio/hwang_1.m4a",
       },
       {
         q: "Q2. 회계 때문에 야심 차게 준비했던 '위러브 초청'이 무산되었을 때 어떠셨나요?",
-        audio: "/assets/audio/hwang_2.m4a",
+        audio: "./assets/audio/hwang_2.m4a",
       },
       {
         q: "Q3. 최부회장님과 다음 회장 자리를 두고 라이벌 관계라고 하는데, 혹시 부회장님께 불리한 무언가를 아시는 게 있습니까?",
-        audio: "/assets/audio/hwang_3.m4a",
+        audio: "./assets/audio/hwang_3.m4a",
       },
     ],
   },
@@ -42,19 +42,19 @@ const SUSPECTS = [
     role: "SUSPECT ③",
     name: "최부회장",
     desc: "차기 회장 후보 / 트리 철거 담당",
-    img: "/assets/images/choi-vice.jpg",
+    img: "./assets/images/choi-vice.jpg",
     questions: [
       {
         q: "Q1. 정전이 일어나자마자 캠프파이어 준비를 위해 나갔다고 했는데, 정확히 무엇을 했나요?",
-        audio: "/assets/audio/choi_1.m4a",
+        audio: "./assets/audio/choi_1.m4a",
       },
       {
         q: 'Q2. 회계에게 보낸 "제발 비밀로 해줘..."라는 카톡은 무슨 일이었나요?',
-        audio: "/assets/audio/choi_2.m4a",
+        audio: "./assets/audio/choi_2.m4a",
       },
       {
         q: "Q3. 회계가 부회장님의 미납된 수련회비를 알고 있었던 것 같은데, 왜 회비를 아직 안 내신 건가요?",
-        audio: "/assets/audio/choi_3.m4a",
+        audio: "./assets/audio/choi_3.m4a",
       },
     ],
   },
@@ -63,11 +63,11 @@ const SUSPECTS = [
     role: "SUSPECT ④",
     name: "훈부회계",
     desc: "간식비·물품 구매 담당",
-    img: "/assets/images/hoon-vice-accountant.jpg",
+    img: "./assets/images/hoon-vice-accountant.jpg",
     questions: [
-      { q: "Q1. 다이닝홀에는 언제 도착하셨나요?", audio: "/assets/audio/hoon_1.m4a" },
-      { q: "Q2. 회계와 갈등이 있었나요?", audio: "/assets/audio/hoon_2.m4a" },
-      { q: "Q3. 정전 났을때 화장실에서 있다고 했는데, 당시에 뭔가 들은건 없나요?", audio: "/assets/audio/hoon_3.m4a" },
+      { q: "Q1. 다이닝홀에는 언제 도착하셨나요?", audio: "./assets/audio/hoon_1.m4a" },
+      { q: "Q2. 회계와 갈등이 있었나요?", audio: "./assets/audio/hoon_2.m4a" },
+      { q: "Q3. 정전 났을때 화장실에서 있다고 했는데, 당시에 뭔가 들은건 없나요?", audio: "./assets/audio/hoon_3.m4a" },
     ],
   },
   {
@@ -75,11 +75,11 @@ const SUSPECTS = [
     role: "SUSPECT ⑤",
     name: "이부서기",
     desc: "기록·음향 담당",
-    img: "/assets/images/lee-sub.jpg",
+    img: "./assets/images/lee-sub.jpg",
     questions: [
-      { q: "Q1. 정전이 발생했을 때 어디서 무엇을 하고 있었나요?", audio: "/assets/audio/lee_1.m4a" },
-      { q: "Q2. 첫 목격자로서 사건 현장의 특이점을 말씀해 주시겠어요?", audio: "/assets/audio/lee_2.m4a" },
-      { q: "Q3. 누가 범인이라고 생각하나요?", audio: "/assets/audio/lee_3.m4a" },
+      { q: "Q1. 정전이 발생했을 때 어디서 무엇을 하고 있었나요?", audio: "./assets/audio/lee_1.m4a" },
+      { q: "Q2. 첫 목격자로서 사건 현장의 특이점을 말씀해 주시겠어요?", audio: "./assets/audio/lee_2.m4a" },
+      { q: "Q3. 누가 범인이라고 생각하나요?", audio: "./assets/audio/lee_3.m4a" },
     ],
   },
   {
@@ -87,11 +87,11 @@ const SUSPECTS = [
     role: "SUSPECT ⑥",
     name: "신서기",
     desc: "미디어팀",
-    img: "/assets/images/shin-sub.jpg",
+    img: "./assets/images/shin-sub.jpg",
     questions: [
-      { q: "Q1. 정전 났을 때 어디 있었나요?", audio: "/assets/audio/shin_1.m4a" },
-      { q: "Q2. 정회계의 손에 평소 쓰시는 볼펜이 쥐어져 있는 이유는 무엇인가요?", audio: "/assets/audio/shin_2.m4a" },
-      { q: "Q3. 회계랑 왜 다투신 건가요? 사이가 안 좋나요?", audio: "/assets/audio/shin_3.m4a" },
+      { q: "Q1. 정전 났을 때 어디 있었나요?", audio: "./assets/audio/shin_1.m4a" },
+      { q: "Q2. 정회계의 손에 평소 쓰시는 볼펜이 쥐어져 있는 이유는 무엇인가요?", audio: "./assets/audio/shin_2.m4a" },
+      { q: "Q3. 회계랑 왜 다투신 건가요? 사이가 안 좋나요?", audio: "./assets/audio/shin_3.m4a" },
     ],
   },
 ];
