@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CASE 02 — 수련회 본부 정전 사건</title>
+    <title>CASE 01 — 디아코노스 정회계 살인 사건 </title>
 
     <!-- Gowun Dodum -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,7 +15,6 @@
   </head>
 
   <body>
-    <!-- 빨간 경고줄(기회 0일 때 자동 표시) -->
     <div id="alertBar" class="alert-bar" aria-live="polite"></div>
 
     <!-- CRIME FILE HEADER -->
@@ -38,7 +37,7 @@
     <main class="board">
       <h2>SUSPECT FILES</h2>
 
-      <!-- 용의자 카드 그리드 -->
+  
       <div id="grid" class="grid"></div>
 
       <!-- PLAYER -->
@@ -46,12 +45,11 @@
         <div class="player-label">NOW PLAYING</div>
         <div id="nowPlaying">—</div>
 
-        <!-- 안내문(재청취 무료) -->
+
         <div class="notice">
           ※ 한번 들었던 증언은 다시 들어도 <b>청문 기회가 줄지 않습니다.</b>
         </div>
 
-        <!-- 청문 기회 표시 (JS가 채움) -->
         <div id="quota"></div>
 
         <div class="controls">
@@ -63,11 +61,10 @@
           </button>
         </div>
 
-        <!-- 증언(인터뷰) 오디오 -->
+  
         <audio id="audio"></audio>
 
-        <!-- ✅ 배경음악(BGM) 오디오 (mp3) -->
-        <audio id="bgm" src="/assets/audio/bgm.mp3" loop preload="auto"></audio>
+        <audio id="bgm" src="./assets/audio/bgm.mp3" loop preload="auto"></audio>
       </section>
     </main>
 
