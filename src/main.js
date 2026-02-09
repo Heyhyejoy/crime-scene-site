@@ -2,7 +2,6 @@
 
 const MAX_PLAYS = 12;
 
-/** ✅ GitHub Pages base(/crime-scene-site/) 대응: public asset 경로에 BASE_URL 자동 붙이기 */
 const BASE = import.meta.env.BASE_URL; // dev: "/" / build(GH pages): "/crime-scene-site/"
 function withBase(path) {
   if (!path) return path;
@@ -58,7 +57,7 @@ const SUSPECTS = [
         audio: "assets/audio/choi_1.m4a",
       },
       {
-        q: 'Q2. 회계에게 보낸 "제발 비밀로 해줘..."라는 카톡은 무슨 일이었나요?',
+        q: 'Q2. 회계에게 보낸 "제발 비밀로 해줘..."라는 카톡은 무엇인가요?',
         audio: "assets/audio/choi_2.m4a",
       },
       {
