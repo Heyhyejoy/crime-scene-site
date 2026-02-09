@@ -1,13 +1,77 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>crime-scene-site</title>
+    <title>CASE 02 — 수련회 본부 정전 사건</title>
+
+    <!-- Gowun Dodum -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
-    <div id="app"></div>
+    <!-- 빨간 경고줄(기회 0일 때 자동 표시) -->
+    <div id="alertBar" class="alert-bar" aria-live="polite"></div>
+
+    <!-- CRIME FILE HEADER -->
+    <header class="topbar">
+      <div class="case-row">
+        <div class="case-left">
+          <div class="case-no">CASE 02</div>
+          <div class="case-title">수련회 본부 정전 사건</div>
+
+          <div class="case-sub">
+            <span class="pill red">CONFIDENTIAL</span>
+            <span class="pill">SUSPECT &amp; EVIDENCE FILES</span>
+          </div>
+        </div>
+
+        <div class="stamp">CONFIDENTIAL</div>
+      </div>
+    </header>
+
+    <main class="board">
+      <h2>SUSPECT FILES</h2>
+
+      <!-- 용의자 카드 그리드 -->
+      <div id="grid" class="grid"></div>
+
+      <!-- PLAYER -->
+      <section class="player">
+        <div class="player-label">NOW PLAYING</div>
+        <div id="nowPlaying">—</div>
+
+        <!-- 안내문(재청취 무료) -->
+        <div class="notice">
+          ※ 한번 들었던 증언은 다시 들어도 <b>청문 기회가 줄지 않습니다.</b>
+        </div>
+
+        <!-- 청문 기회 표시 (JS가 채움) -->
+        <div id="quota"></div>
+
+        <div class="controls">
+          <button id="toggleBtn" type="button" aria-label="Play or Pause">
+            ▶︎ / ❚❚
+          </button>
+          <button id="stopBtn" type="button" aria-label="Stop">
+            ■ STOP
+          </button>
+        </div>
+
+        <!-- 증언(인터뷰) 오디오 -->
+        <audio id="audio"></audio>
+
+        <!-- ✅ 배경음악(BGM) 오디오 (mp3) -->
+        <audio id="bgm" src="/assets/audio/bgm.mp3" loop preload="auto"></audio>
+      </section>
+    </main>
+
+    <!-- 엔트리 -->
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
