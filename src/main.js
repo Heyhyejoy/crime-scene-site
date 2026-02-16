@@ -1,6 +1,6 @@
 
 
-const MAX_PLAYS = 12;
+const MAX_PLAYS = 7;
 
 const BASE = import.meta.env.BASE_URL; // dev: "/" / build(GH pages): "/crime-scene-site/"
 function withBase(path) {
